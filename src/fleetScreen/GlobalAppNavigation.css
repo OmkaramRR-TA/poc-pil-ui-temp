@@ -1,0 +1,47 @@
+/* ── Global App Navigation — white pill (left side overlay) ───────────────────── */
+
+.global-app-nav {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: #ffffff;
+  border-radius: 32px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 8px;
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+
+/* Blue circle behind the active nav item (Fleet / MapTrifold, index 1) */
+/* y = 48 (top-pad) + 40 (House) + 12 (gap) = 100 — matches Figma layout_3SYFF8 */
+.global-app-nav__active-indicator {
+  position: absolute;
+  left: 5px;
+  top: 100px;
+  width: 40px;
+  height: 40px;
+  background: #0072bc;
+  border-radius: 100%;
+}
+
+/* Profile avatar wrapper */
+.global-app-nav__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.global-app-nav__avatar-img {
+  object-fit: cover;
+  display: block;
+}
